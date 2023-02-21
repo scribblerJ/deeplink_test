@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buzzvil Page</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Check if user is accessing the page from a mobile device
+      if (/android|iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+
+        // Check if Facebook app is installed
+        if (userAgent.indexOf("FBAN") > -1 || userAgent.indexOf("FBAV") > -1) {
+
+          // Redirect to Buzzvil Facebook page in the Facebook app
+          window.location = "fb://page/310529302461427";
+
+        } else {
+
+          // Redirect to Buzzvil Facebook page on the web
+          window.location = "https://www.facebook.com/Buzzvil/";
+        }
+
+      } else {
+
+        // Redirect to Buzzvil Facebook page on the web
+        window.location = "https://www.facebook.com/Buzzvil/";
+      }
+    </script>
+  </body>
+</html>
